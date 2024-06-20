@@ -27,7 +27,6 @@ project "GLFW"
   	}
 
   	filter "system:windows"
-    		buildoptions { "-std=c11", "-lgdi32" }
     		systemversion "latest"
 
     		files
@@ -52,9 +51,13 @@ project "GLFW"
 
 	filter "configurations:Debug"
 		runtime "Debug"
+		symbols "on"
 
 	filter "configurations:Release"
 		runtime "Release"
+		optimize "speed"
 
-	filter "configurations:Dist"
-		runtime "Release"	
+    	filter "configurations:Dist"
+		runtime "Release"
+		optimize "speed"
+        	symbols "off"	
