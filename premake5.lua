@@ -41,11 +41,11 @@ project "GLFW"
       			"_GLFW_WIN32",
       			"_CRT_SECURE_NO_WARNINGS"
     		}
-	filter "configuration:Debug"
+	filter "configurations:Debug"
 		runtime "Debug"
 
-	filter "configuration:Release"
+	filter "configurations:Release"
 		runtime "Release"
 
-	filter "configuration:Dist"
+	filter "configurations:Dist"
 		runtime "Release"	
